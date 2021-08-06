@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		BCC6B45326BB9AAE000A81EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B45226BB9AAE000A81EB /* AppDelegate.swift */; };
 		BCC6B45526BB9AAE000A81EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B45426BB9AAE000A81EB /* SceneDelegate.swift */; };
-		BCC6B45726BB9AAE000A81EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B45626BB9AAE000A81EB /* ViewController.swift */; };
-		BCC6B45A26BB9AAE000A81EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC6B45826BB9AAE000A81EB /* Main.storyboard */; };
+		BCC6B45726BB9AAE000A81EB /* FilmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B45626BB9AAE000A81EB /* FilmListViewController.swift */; };
 		BCC6B45C26BB9AB0000A81EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCC6B45B26BB9AB0000A81EB /* Assets.xcassets */; };
 		BCC6B45F26BB9AB0000A81EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC6B45D26BB9AB0000A81EB /* LaunchScreen.storyboard */; };
+		BCC6B46926BB9B4E000A81EB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B46826BB9B4E000A81EB /* API.swift */; };
+		BCC6B46B26BB9D13000A81EB /* FilmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B46A26BB9D13000A81EB /* FilmsViewModel.swift */; };
+		BCC6B46E26BB9F5F000A81EB /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B46D26BB9F5F000A81EB /* FilmCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BCC6B44F26BB9AAE000A81EB /* studio-ghibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studio-ghibli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC6B45226BB9AAE000A81EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCC6B45426BB9AAE000A81EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCC6B45626BB9AAE000A81EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BCC6B45926BB9AAE000A81EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCC6B45626BB9AAE000A81EB /* FilmListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewController.swift; sourceTree = "<group>"; };
 		BCC6B45B26BB9AB0000A81EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCC6B45E26BB9AB0000A81EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCC6B46026BB9AB0000A81EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC6B46826BB9B4E000A81EB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BCC6B46A26BB9D13000A81EB /* FilmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModel.swift; sourceTree = "<group>"; };
+		BCC6B46D26BB9F5F000A81EB /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		BCC6B45126BB9AAE000A81EB /* studio-ghibli */ = {
 			isa = PBXGroup;
 			children = (
+				BCC6B46C26BB9F48000A81EB /* Cells */,
+				BCC6B46726BB9B42000A81EB /* Model */,
+				BCC6B46626BB9B37000A81EB /* View Controllers */,
 				BCC6B45226BB9AAE000A81EB /* AppDelegate.swift */,
 				BCC6B45426BB9AAE000A81EB /* SceneDelegate.swift */,
-				BCC6B45626BB9AAE000A81EB /* ViewController.swift */,
-				BCC6B45826BB9AAE000A81EB /* Main.storyboard */,
 				BCC6B45B26BB9AB0000A81EB /* Assets.xcassets */,
 				BCC6B45D26BB9AB0000A81EB /* LaunchScreen.storyboard */,
 				BCC6B46026BB9AB0000A81EB /* Info.plist */,
 			);
 			path = "studio-ghibli";
+			sourceTree = "<group>";
+		};
+		BCC6B46626BB9B37000A81EB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCC6B45626BB9AAE000A81EB /* FilmListViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BCC6B46726BB9B42000A81EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCC6B46826BB9B4E000A81EB /* API.swift */,
+				BCC6B46A26BB9D13000A81EB /* FilmsViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCC6B46C26BB9F48000A81EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BCC6B46D26BB9F5F000A81EB /* FilmCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +156,6 @@
 			files = (
 				BCC6B45F26BB9AB0000A81EB /* LaunchScreen.storyboard in Resources */,
 				BCC6B45C26BB9AB0000A81EB /* Assets.xcassets in Resources */,
-				BCC6B45A26BB9AAE000A81EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC6B45726BB9AAE000A81EB /* ViewController.swift in Sources */,
+				BCC6B45726BB9AAE000A81EB /* FilmListViewController.swift in Sources */,
+				BCC6B46B26BB9D13000A81EB /* FilmsViewModel.swift in Sources */,
 				BCC6B45326BB9AAE000A81EB /* AppDelegate.swift in Sources */,
+				BCC6B46926BB9B4E000A81EB /* API.swift in Sources */,
+				BCC6B46E26BB9F5F000A81EB /* FilmCell.swift in Sources */,
 				BCC6B45526BB9AAE000A81EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +178,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BCC6B45826BB9AAE000A81EB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BCC6B45926BB9AAE000A81EB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BCC6B45D26BB9AB0000A81EB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "christellenieves.studio-ghibli";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "christellenieves.studio-ghibli";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
